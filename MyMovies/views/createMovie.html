@@ -1,0 +1,47 @@
+﻿<div>
+    <h2>Create Movie</h2>
+    <div>
+        <form name="createMovie">
+            <table>
+                <tr>
+                    <td align="right">Title :</td>
+                    <td align="left"><input type="text" ng-model="newMovie.name" align="right" required="" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Description :</td>
+                    <td align="left"><textarea cols="40" rows="5" ng-model="newMovie.description"></textarea></td>
+                </tr>
+                <tr>
+                    <td align="right">Director :</td>
+                    <td align="left"><input type="text" ng-model="newMovie.director" required="" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Release Year :</td>
+                    <td align="left"><input type="number" ng-model="newMovie.releaseYear" required="" /></td>
+                </tr>
+                <tr>
+                    <td align="right">Rating :</td>
+                    <td align="left"><select name="myDropDown" ng-model="newMovie.rating">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">Language :</td>
+                    <td align="left"><input type="text" ng-model="newMovie.language" required="" /></td>
+                </tr>
+            </table>
+              <br/>
+            <input type="submit" class="btn" value="Save" ng-disabled="createMovie.$invalid" ng-click="addMovie(newMovie.name, newMovie.description, newMovie.director, newMovie.releaseYear, newMovie.rating, newMovie.language)" />
+        </form>
+    </div>
+</div>

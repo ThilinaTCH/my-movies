@@ -1,0 +1,8 @@
+﻿<div>
+    <a href="#/createMovie" class="btn" role="button">Add Movie</a><br/><br />
+    <ul style="list-style: none;" ng-repeat="movie in movies | orderBy:'releaseYear':true">
+        <li>
+            <list-item name="{{movie.name}}" release-year="{{movie.releaseYear}}" rating="{{movie.rating}}" description="{{movie.description}}" id="{{movie.id}}"></list-item>
+        </li>
+    </ul>
+</div>

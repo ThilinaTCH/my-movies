@@ -1,0 +1,12 @@
+﻿<div>
+    <h3>{{detailMovie.name}}</h3>
+    <b>Rating</b><div class="star-rating" star-rating rating-value="detailMovie.rating" data-max="10"></div><br/>
+    <p>{{detailMovie.description}}</p><br/>
+    <b>Directed By :</b> {{detailMovie.directedBy}}<br />
+    <b>Release Year :</b> {{detailMovie.releaseYear}}<br />
+    <b>Language :</b> {{detailMovie.language}}<br/><br />
+    <h4>Characters</h4>
+    <ul ng-repeat="character in detailMovie.characters">
+        <li>{{character.character}} ({{character.actor}})</li>
+    </ul>
+</div>
